@@ -18,9 +18,9 @@ const cardsData = [
       title: "Tigre",
       text: "El tigre es el felino más grande del mundo, famoso por sus franjas anaranjadas y negras.",
       link: "/animales/tigre",
-      imgSrc: "https://www.selwo.es/content/dam/swa/images/descubre-el-zoo/especies-y-territorios/animales/panda-rojo/Panda-rojo-Selwo-Aventura-13.jpg",
     },
     {
+      imgSrc: "https://www.selwo.es/content/dam/swa/images/descubre-el-zoo/especies-y-territorios/animales/panda-rojo/Panda-rojo-Selwo-Aventura-13.jpg",
       title: "Panda rojo",
       text: "El panda rojo, más pequeño que el gigante, vive en los bosques de Asia y come bambú y frutas.",
       link: "/animales/panda-rojo",
