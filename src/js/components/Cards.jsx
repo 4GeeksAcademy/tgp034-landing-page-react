@@ -2,43 +2,53 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 import '../../styles/index.css';
+import Card from "./Card";
 
 const Cards = () => {
-  //Datos comunes de la tarjeta
-  const cardData = {
-    imgSrc: "https://ro-camper.ro/imgs/inchiriat-camper-romania-rulota.jpg.png",
-    title: "Card title",
-    text: "Some quick example text to build on the card title and make up the bulk of the card’s content.",
-    link: "#",
-  };
 
-  //Creamos un array
-  const cardsArray = Array.from({ length: 4 });
-
+const cardsData = [
+    {
+      imgSrc: "https://www.muyinteresante.com/wp-content/uploads/sites/5/2023/12/28/658d3cc8a1698.jpeg?resize=1024,683",
+      title: "Panda gigante",
+      text: "El panda gigante es conocido por su pelaje blanco y negro y su dieta casi exclusivamente de bambú.",
+      link: "/animales/panda",
+    },
+    {
+      imgSrc: "https://www.telemundo.com/sites/nbcutelemundo/files/styles/fit-760w/public/images/article/cover/2018/04/19/tigre-caminando.jpg?ramen_itok=iqwQftIcTf",
+      title: "Tigre",
+      text: "El tigre es el felino más grande del mundo, famoso por sus franjas anaranjadas y negras.",
+      link: "/animales/tigre",
+      imgSrc: "https://www.selwo.es/content/dam/swa/images/descubre-el-zoo/especies-y-territorios/animales/panda-rojo/Panda-rojo-Selwo-Aventura-13.jpg",
+    },
+    {
+      title: "Panda rojo",
+      text: "El panda rojo, más pequeño que el gigante, vive en los bosques de Asia y come bambú y frutas.",
+      link: "/animales/panda-rojo",
+    },
+    {
+      imgSrc: "https://static.nationalgeographic.es/files/styles/image_3200/public/01-waq-animal-hoarders-nationalgeographic_1902487.webp?w=1023&h=682&q=100",
+      title: "Ardilla",
+      text: "Las ardillas son roedores ágiles, famosas por recolectar y almacenar bellotas y frutos secos.",
+      link: "/animales/ardilla",
+    },
+  ];
+  
   return (
     <div
       id="cards"
-      className="d-flex align-items-center justify-content-evenly
-                 flex-column flex-sm-row flex-wrap gap-4 w-100 pb-5"
+      className="
+        d-flex align-items-center justify-content-evenly
+        flex-column flex-sm-row flex-wrap gap-4 w-100 pb-5
+      "
     >
-      {cardsArray.map((_, i) => (
-        <div className="card" key={i}>
-          <img
-            src={cardData.imgSrc}
-            className="card-img-top"
-            alt={cardData.title}
-          />
-          <div className="card-body d-flex flex-column align-items-center">
-            {/* Si quieres numerar los títulos: */}
-            <h5 className="card-title text-center">
-              {cardData.title} {i + 1}
-            </h5>
-            <p className="card-text text-center">{cardData.text}</p>
-            <a href={cardData.link} className="btn btn-primary mb-2">
-              Find out more!
-            </a>
-          </div>
-        </div>
+      {cardsData.map((card, i) => (
+        <Card
+          key={i}
+          imgSrc={card.imgSrc}
+          title={card.title}
+          text={card.text}
+          link={card.link}
+        />
       ))}
     </div>
   );

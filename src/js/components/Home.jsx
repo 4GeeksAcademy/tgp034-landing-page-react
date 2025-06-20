@@ -10,12 +10,12 @@ import Footer from "./Footer.jsx";
 const Home = () => {
 	return (
 		<div id="body" className="d-flex flex-column container-fluid h-100 p-0 m-0">
-			<Navbar/>
+			<Navbar />
 			<div id="content" className="container p-0">
-				<Jumbotron/>
-				<Cards/>
+				<Jumbotron />
+				<Cards />
 			</div>
-			<Footer/>
+			<Footer />
 		</div>
 	);
 };
