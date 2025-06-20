@@ -5,6 +5,7 @@ import '../../styles/index.css'
 import Navbar from "./Navbar.jsx";
 import Jumbotron from "./Jumbotron.jsx";
 import Cards from "./Cards.jsx";
+import Footer from "./Footer.jsx";
 //create your first component
 const Home = () => {
 	return (
@@ -14,11 +15,7 @@ const Home = () => {
 				<Jumbotron/>
 				<Cards/>
 			</div>
-			<div className="d-flex">
-				<nav id="footer" className="p-3 w-100 navbar bg-dark justify-content-center align-items-center" data-bs-theme="dark">
-					<p id="footer-text" className="navbar-text text-center m-0">Copyright© My Website 2025</p>
-				</nav>
-			</div>
+			<Footer/>
 		</div>
 	);
 };

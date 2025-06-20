@@ -1,20 +1,21 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap"
-import '../../styles/index.css'
-//create your first component
+import "bootstrap";
+import '../../styles/index.css';
+
 const Cards = () => {
+  //Datos comunes de la tarjeta
+  const cardData = {
+    imgSrc: "https://ro-camper.ro/imgs/inchiriat-camper-romania-rulota.jpg.png",
+    title: "Card title",
+    text: "Some quick example text to build on the card title and make up the bulk of the card’s content.",
+    link: "#",
+  };
 
-    const cardData = {
-        imgSrc: "https://ro-camper.ro/imgs/inchiriat-camper-romania-rulota.jpg.png",
-        title: "Card title",
-        text: "Some quick example text to build on the card title and make up the bulk of the card’s content.",
-        link: "#",
-    };
+  //Creamos un array
+  const cardsArray = Array.from({ length: 4 });
 
-    const cardsArray = Array.from({ length: 4 });
-
-    return (
+  return (
     <div
       id="cards"
       className="d-flex align-items-center justify-content-evenly
@@ -28,8 +29,9 @@ const Cards = () => {
             alt={cardData.title}
           />
           <div className="card-body d-flex flex-column align-items-center">
+            {/* Si quieres numerar los títulos: */}
             <h5 className="card-title text-center">
-              {cardData.title}
+              {cardData.title} {i + 1}
             </h5>
             <p className="card-text text-center">{cardData.text}</p>
             <a href={cardData.link} className="btn btn-primary mb-2">
